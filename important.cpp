@@ -5,7 +5,7 @@ auto MagnumFont::doOpenData(const Containers::ArrayView<const char> data, const 
         Error{} << "Text::MagnumFont::openData(): the font can be opened only from the filesystem or if a file callback is present";
         return {};
     }
-
+//yes
  if(cache.features() & GlyphCacheFeature::ImageProcessing) {
         const Image3D image3 = cache.processedImage();
         tgaData = Trade::TgaImageConverter().convertToData(ImageView2D{image3.format(), image3.size().xy(), image3.data()});
